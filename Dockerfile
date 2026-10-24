@@ -1,7 +1,7 @@
 FROM node:lts-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm install   # <--- Change this from 'npm ci' to 'npm install'
+RUN npm install   
 COPY . .
 RUN npm test
 
